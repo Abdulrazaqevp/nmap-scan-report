@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Nmap - Essential Scan Report</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin: 20px; color: #111; background:#f7f9fc; }
+    header { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+    h1 { margin:0; font-size:1.25rem; }
+    .meta { color:#475569; font-size:0.9rem; }
+    .card { background:white; border-radius:12px; box-shadow:0 4px 20px rgba(15,23,42,0.06); padding:16px; margin-top:16px; }
+    table { width:100%; border-collapse:collapse; margin-top:8px; }
+    th, td { text-align:left; padding:8px 10px; border-bottom:1px solid #eef2f7; font-size:0.95rem; }
+    th { background:#f1f5f9; font-weight:600; color:#0f172a; }
+    .host-title { display:flex; gap:12px; align-items:center; }
+    .chip { background:#eef2ff; color:#075985; padding:4px 8px; border-radius:999px; font-size:0.8rem; }
+    .ports { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace; font-size:0.92rem; }
+    .muted { color:#6b7280; font-size:0.9rem; }
+    pre { background:#0b1220; color:#e6eef8; padding:12px; border-radius:8px; overflow:auto; max-height:350px; }
+    details { margin-top:12px; }
+    .summary { margin-top:12px; font-weight:600; }
+    .small { font-size:0.88rem; color:#475569; }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Nmap — Essential Scan Report</h1>
+      <div class="meta">Generated from provided Nmap output — <span class="small">Start: 2025-11-13 07:01 EST · Duration: 20.73s</span></div>
+    </div>
+    <div class="muted small">Nmap 7.95 output (parsed)</div>
+  </header>
+
+  <section class="card" id="hosts">
+    <div class="host-title">
+      <div style="flex:1">
+        <strong>Hosts scanned</strong>
+        <div class="small muted">2 IP addresses scanned · 2 hosts up</div>
+      </div>
+      <div class="chip">Scan: 2025-11-13 07:01 EST</div>
+    </div>
+
+    <!-- Host 1 -->
+    <article style="margin-top:14px;">
+      <h3 style="margin:6px 0 0 0">10.0.2.2 <span class="small muted">— Host is up (0.0018s latency)</span></h3>
+      <div class="small muted">MAC: 52:55:0A:00:02:02 (Unknown)</div>
+
+      <table aria-label="ports for 10.0.2.2">
+        <thead>
+          <tr><th>Port</th><th>State</th><th>Service</th><th>Version / Notes</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>80/tcp</td><td>open</td><td>http</td><td>Microsoft IIS httpd 10.0</td></tr>
+          <tr><td>135/tcp</td><td>open</td><td>msrpc</td><td>Microsoft Windows RPC</td></tr>
+          <tr><td>445/tcp</td><td>open</td><td>microsoft-ds</td><td>?</td></tr>
+          <tr><td>5357/tcp</td><td>open</td><td>http</td><td>Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)</td></tr>
+        </tbody>
+      </table>
+
+      <div style="margin-top:8px;">
+        <div class="small"><strong>Device / OS info</strong></div>
+        <div class="small muted">Device type: VoIP adapter | general purpose | bridge | printer</div>
+        <div class="small muted">Aggressive OS guesses: AT&T BGW210 voice gateway; QEMU user mode network gateway; Oracle VirtualBox Slirp NAT bridge; GNU Hurd; Konica Minolta 7035 (guesses may overlap)</div>
+        <div class="small" style="margin-top:6px;"><strong>Note:</strong> OSScan results may be unreliable (Nmap could not find at least 1 open and 1 closed port). Service Info: OS: Windows.</div>
+      </div>
+    </article>
+
+    <hr style="border:none;border-top:1px solid #eef2f7;margin:12px 0;" />
+
+    <!-- Host 2 -->
+    <article>
+      <h3 style="margin:6px 0 0 0">10.0.2.3 <span class="small muted">— Host is up (0.0026s latency)</span></h3>
+      <div class="small muted">MAC: 52:55:0A:00:02:03 (Unknown)</div>
+
+      <table aria-label="ports for 10.0.2.3">
+        <thead>
+          <tr><th>Port</th><th>State</th><th>Service</th><th>Version / Notes</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>53/tcp</td><td>open</td><td>domain</td><td>dnsmasq 2.51</td></tr>
+        </tbody>
+      </table>
+
+      <div style="margin-top:8px;">
+        <div class="small"><strong>Device / OS info</strong></div>
+        <div class="small muted">Device type: VoIP adapter | general purpose | bridge | printer</div>
+        <div class="small muted">Aggressive OS guesses: AT&T BGW210 voice gateway; QEMU user mode network gateway; Oracle VirtualBox Slirp NAT bridge; Samsung CLP-315W; Dell 1815dn; VxWorks; Xerox WorkCentre 4150 (guesses may overlap)</div>
+        <div class="small" style="margin-top:6px;"><strong>Note:</strong> OSScan results may be unreliable (Nmap could not find at least 1 open and 1 closed port).</div>
+      </div>
+    </article>
+
+    <div class="summary">Summary</div>
+    <div class="small muted">2 IP addresses (2 hosts up) · Not shown: many filtered ports · Scan completed: 20.73 seconds</div>
+
+    <details>
+      <summary style="cursor:pointer; font-weight:600; margin-top:10px;">Show raw Nmap output</summary>
+      <pre>
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-11-13 07:01 EST
+Nmap scan report for 10.0.2.2
+Host is up (0.0018s latency).
+Not shown: 996 filtered tcp ports (no-response)
+PORT     STATE SERVICE       VERSION
+80/tcp   open  http          Microsoft IIS httpd 10.0
+135/tcp  open  msrpc         Microsoft Windows RPC
+445/tcp  open  microsoft-ds?
+5357/tcp open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+MAC Address: 52:55:0A:00:02:02 (Unknown)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: VoIP adapter|general purpose|bridge|printer
+Running (JUST GUESSING): AT&T embedded (98%), QEMU (94%), Oracle Virtualbox (94%), Slirp (94%), GNU Hurd (88%), Konica Minolta embedded (88%)
+OS CPE: cpe:/a:qemu:qemu cpe:/a:oracle:vm_virtualbox cpe:/a:danny_gasparovski:slirp cpe:/o:gnu:hurd cpe:/h:konicaminolta:7035
+Aggressive OS guesses: AT&T BGW210 voice gateway (98%), QEMU user mode network gateway (94%), Oracle Virtualbox Slirp NAT bridge (94%), GNU Hurd 0.3 (88%), Konica Minolta 7035 printer (88%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Nmap scan report for 10.0.2.3
+Host is up (0.0026s latency).
+Not shown: 999 filtered tcp ports (net-unreach)
+PORT   STATE SERVICE VERSION
+53/tcp open  domain  dnsmasq 2.51
+MAC Address: 52:55:0A:00:02:03 (Unknown)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: VoIP adapter|general purpose|bridge|printer
+Running (JUST GUESSING): AT&T embedded (96%), QEMU (95%), Oracle Virtualbox (95%), Slirp (95%), Samsung embedded (87%), Dell embedded (87%), Wind River VxWorks (87%), Xerox embedded (87%)
+OS CPE: cpe:/a:qemu:qemu cpe:/o:oracle:virtualbox cpe:/a:danny_gasparovski:slirp cpe:/h:samsung:clp-315w cpe:/h:dell:1815dn cpe:/o:windriver:vxworks cpe:/h:xerox:workcentre_4150
+Aggressive OS guesses: AT&T BGW210 voice gateway (96%), QEMU user mode network gateway (95%), Oracle Virtualbox Slirp NAT bridge (95%), Samsung CLP-315W printer (87%), Dell 1815dn printer (87%), VxWorks (87%), Xerox WorkCentre 4150 printer (87%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 2 IP addresses (2 hosts up) scanned in 20.73 seconds
+      </pre>
+    </details>
+  </section>
+
+  <footer style="margin-top:18px" class="small muted">
+    Tips: Save this file to preserve the report. You can also copy the HTML into a webserver or attach it to tickets. If you want, I can:
+    <ul>
+      <li>add clickable links for each open service (e.g., http://10.0.2.2:80),</li>
+      <li>highlight critical ports and suggest remediation steps, or</li>
+      <li>export a printable PDF version of this report.</li>
+    </ul>
+  </footer>
+</body>
+</html>
